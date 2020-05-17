@@ -3,8 +3,18 @@ language: node_js
 node_js:
     - node
 
+services:
+    - docker
+    
+# by default it will do the below so we can comment it out
+# install:
+#     - npm ci
+
+before_install:
+    - docker build -t abc1 -f Dockerfile.dev .
+
 script:
-    - npm run test:unit
+    - docker run abc1 npm run test:unit -- --coverage
 
 after_success:
     - npm run build
