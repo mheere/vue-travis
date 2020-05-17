@@ -16,11 +16,11 @@ before_install:
 script:
     - docker run abc1 npm run test:unit -- --coverage
 
-after_install:
-    - npm run build
-
-# before_deploy:
+# after_install:
 #     - npm run build
+
+after_success:
+    - npm run build
 
 deploy:
     provider: pages
