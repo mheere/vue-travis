@@ -1,0 +1,33 @@
+language: node_js
+
+node_js:
+    - node
+
+services:
+    - docker
+    
+
+# by default it will do the below so we can comment it out
+# install:
+#     - npm ci
+
+before_install:
+    - docker build -t abc1 -f Dockerfile.dev .
+
+script:
+    - docker run abc1 npm run test:unit -- --coverage
+
+after_install:
+    - npm run build
+
+# before_deploy:
+#     - npm run build
+
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN_VUE3  # Set in the settings page of your repository, as a secure variable
+    keep_history: true,
+    local_dir: dist
+    on:
+        branch: master
