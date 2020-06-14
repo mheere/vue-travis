@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/mheere/vue-travis.svg?branch=master)](https://travis-ci.org/mheere/vue-travis)
 # vue-travis
 
 ## Project setup
