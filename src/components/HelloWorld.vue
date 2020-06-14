@@ -2,6 +2,7 @@
   <div class="hello">
     <!-- <h1>{{ msg }}</h1> -->
     <h2>Showing the power of Travis CI/CD!</h2>
+    <h4>(now includes build badge in GitHub repo)</h4>
   </div>
 </template>
 
