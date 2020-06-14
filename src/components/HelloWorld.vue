@@ -17,8 +17,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
+h2 {
   margin: 40px 0 0;
+  color: maroon;
+}
+h4 {
+  color: darkblue;
+  font-style: italic;
 }
 ul {
   list-style-type: none;
