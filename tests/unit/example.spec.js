@@ -7,6 +7,7 @@ describe('HelloWorld.vue', () => {
     const wrapper = shallowMount(HelloWorld, {
       propsData: { msg }
     });
+    // ensure we find the msg in the full string returned HelloWorld
     expect(wrapper.text()).toMatch(new RegExp(msg));
   });
 });
